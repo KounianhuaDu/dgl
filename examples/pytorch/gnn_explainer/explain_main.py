@@ -72,7 +72,7 @@ def main(args):
         loss.backward()
         optim.step()
 
-        #print("In epoch: {:03d}, Loss: {:.6f}, Pred: {}".format(epoch, loss.item(), model_predict[new_n_idx]))
+        print("In epoch: {:03d}, Loss: {:.6f}, Pred: {}".format(epoch, loss.item(), model_predict[new_n_idx]))
 
     # visualize the importance of edges
     edge_weights = explainer.edge_mask.sigmoid().detach()
